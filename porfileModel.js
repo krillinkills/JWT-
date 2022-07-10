@@ -5,4 +5,4 @@ const ProfileSchema = new mongoose.Schema({
   password: String,
   date: { type: Date, default: Date.now() },
 });
-module.exports = mongoose.model('profile', ProfileSchema);
+module.exports = mongoose.model('profileModel', ProfileSchema);
