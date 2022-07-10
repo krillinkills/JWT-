@@ -1,5 +1,9 @@
 const router = require('express').Router();
+const profileModel = require('../porfileModel');
 
-router.get('/', (req, res) => {
-  res.send('this is register');
+router.get('/', async (req, res) => {
+  await new profileModel(req.body).save();
+  res.send('register');
 });
+
+module.exports = router;
